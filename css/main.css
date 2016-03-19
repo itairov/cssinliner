@@ -32,6 +32,7 @@ html {
 body {
     font-size: 16px;
     padding-top:20px;
+    background-color: #333333;
 }
 
 .header{
@@ -57,4 +58,10 @@ body {
 
 .container__textarea {
     width: 100%;
+}
+
+.main_block__col--css .CodeMirror,
+.main_block__col--html .CodeMirror,
+.main_block__col--result .CodeMirror {
+    height: 100%;
 }
