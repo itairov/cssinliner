@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML, CSS inliner</title>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="libs/normalize.css">
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="height__adaptive--100">
+    <header class="header container">
+        <div class="row">
+            <div class="col-md-9">
+                <button type="button" class="btn btn-success">Конвертировать</button>
+            </div>
+            <div class="col-md-3">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active js-toggle js-html"><a href="#">HTML</a></li>
+                    <li role="presentation" class="js-toggle js-source"><a href="#">Source</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container main_block height__adaptive--100 ">
+        <div class="row main_block__row height__adaptive--50">
+            <div class="col-md-6 height__adaptive--100">
+                <textarea class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML"></textarea>
+            </div>
+            <div class="col-md-6 height__adaptive--100">
+                <textarea class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS"></textarea>
+            </div>
+        </div>
+        <div class="main_block__row row height__adaptive--50">
+            <div class="col-md-12 height__adaptive--100">
+                <!--  <div class="container__html-view"></div> -->
+                <textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Result"></textarea>
+            </div>
+        </div>
+    </main>
+    <script src="js/common.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google Analytics counter -->
+    <!-- /Google Analytics counter -->
+</body>
+
+</html>
