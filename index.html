@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="libs/normalize.css">
     <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="libs/bootstrap/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/theme/ambiance.min.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -17,32 +19,52 @@
     <header class="header container">
         <div class="row">
             <div class="col-md-9">
-                <button type="button" class="btn btn-success">Конвертировать</button>
+                <button type="button" class="btn btn-success js-convert">Convert</button>
             </div>
             <div class="col-md-3">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active js-toggle js-html"><a href="#">HTML</a></li>
-                    <li role="presentation" class="js-toggle js-source"><a href="#">Source</a></li>
+                    <li role="presentation" class="js-toggle js-source"><a href="#">View</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <main class="container main_block height__adaptive--100 ">
         <div class="row main_block__row height__adaptive--50">
-            <div class="col-md-6 height__adaptive--100">
-                <textarea class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML"></textarea>
+            <div class="col-md-6 height__adaptive--100 main_block__col--html">
+                <textarea class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
+<!doctype html>
+<html lang="en">
+<style>
+    p.red {
+        color: red;
+    }
+</style>
+<body>
+<p class="red">
+    Red paragraph
+</p>
+</body>
+</html>
+                </textarea>
             </div>
-            <div class="col-md-6 height__adaptive--100">
+            <div class="col-md-6 height__adaptive--100 main_block__col--css">
                 <textarea class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS"></textarea>
             </div>
         </div>
         <div class="main_block__row row height__adaptive--50">
-            <div class="col-md-12 height__adaptive--100">
+            <div class="col-md-12 height__adaptive--100 main_block__col--result">
                 <!--  <div class="container__html-view"></div> -->
-                <textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Result"></textarea>
+                <textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Inlined HTML"></textarea>
             </div>
         </div>
     </main>
+    <script src="libs/jquery/jquery-1.11.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/javascript/javascript.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/addon/selection/active-line.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/addon/edit/matchbrackets.min.js"></script>
     <script src="js/common.js"></script>
     <!-- Yandex.Metrika counter -->
     <!-- /Yandex.Metrika counter -->
