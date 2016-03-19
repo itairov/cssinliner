@@ -30,34 +30,31 @@
         </div>
     </header>
     <main class="container main_block height__adaptive--100 ">
+<form enctype="application/x-www-form-urlencoded" action="/">
+
         <div class="row main_block__row height__adaptive--50">
             <div class="col-md-6 height__adaptive--100 main_block__col--html">
-                <textarea class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
-<!doctype html>
-<html lang="en">
-<style>
-    p.red {
-        color: red;
-    }
-</style>
-<body>
-<p class="red">
-    Red paragraph
-</p>
-</body>
-</html>
-                </textarea>
+<textarea name="contentHtml" class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
+{{contentHtml}}
+</textarea>
             </div>
             <div class="col-md-6 height__adaptive--100 main_block__col--css">
-                <textarea class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS"></textarea>
+
+<textarea name="contentCss" class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS">
+{{contentCss}}
+</textarea>
+
             </div>
         </div>
         <div class="main_block__row row height__adaptive--50">
             <div class="col-md-12 height__adaptive--100 main_block__col--result">
                 <!--  <div class="container__html-view"></div> -->
-                <textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Inlined HTML"></textarea>
+<textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Inlined HTML">
+{{contentResult}}
+</textarea>
             </div>
         </div>
+</form>
     </main>
     <script src="libs/jquery/jquery-1.11.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.js"></script>
