@@ -1,0 +1,16 @@
+{
+    "name": "itairov/cssinliner",
+    "description": "web service for inlining css styles in html tags, for emails",
+    "type": "open source",
+    "require": {
+        "tijsverkoyen/css-to-inline-styles": "^1.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "I Tairov",
+            "email": "agada2013@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev"
+}

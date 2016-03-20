@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8" />
     <title>HTML, CSS inliner</title>
@@ -20,51 +19,101 @@
 <body class="height__adaptive--100">
     <header class="header container">
         <div class="row">
-            <div class="col-md-9">
-                <button type="button" class="btn btn-success js-convert">Convert <i class="fa fa-cogs header__convert--emblem"></i></button>
+            <div class="col-md-8">
+                <button type="button" class="btn btn-success js-convert">Convert <i class="fa fa-cog header__convert--emblem"></i></button>
             </div>
+
             <div class="col-md-3">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active js-toggle js-html"><a href="#">HTML</a></li>
                     <li role="presentation" class="js-toggle js-source"><a href="#">View</a></li>
                 </ul>
             </div>
+            <div class="col-md-1">
+                <!--<script type="text/javascript" src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>-->
+                <!--<script type="text/javascript" src="http://yastatic.net/share2/share.js" charset="utf-8"></script>-->
+                <!--<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,whatsapp" data-limit="0"></div>-->
+            </div>
+
         </div>
     </header>
     <main class="container main_block height__adaptive--100 ">
+
         <div class="row main_block__row height__adaptive--50">
             <div class="col-md-6 height__adaptive--100 main_block__col--html">
-             <i class="fa fa-html5 emblem emblem--html"></i>
-                <textarea class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
-<!doctype html>
-<html lang="en">
-<style>
-p.red {
-    color: red;
-}
-</style>
-
+                <i class="fa fa-html5 emblem emblem--html"></i>
+<textarea name="contentHtml" class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+</head>
 <body>
-    <p class="red">
-        Red paragraph
-    </p>
-</body>
+<div class="base example">
+    <h3>
+        Загловок
+    </h3>
 
+    <p>
+        Текст
+    </p>
+
+</div>
+
+<table>
+    <tr>
+        <td>
+            first child
+        </td>
+        <td>
+            second child
+        </td>
+        <td>
+            third child
+        </td>
+        <td>
+            last child
+        </td>
+    </tr>
+</table>
+
+</body>
 </html>
-                </textarea>
+</textarea>
             </div>
             <div class="col-md-6 height__adaptive--100 main_block__col--css">
                 <i class="fa fa-css3 emblem emblem--css"></i>
-                <textarea class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS"></textarea>
+<textarea name="contentCss" class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS">
+.base h3 {
+    color: blue;
+}
+.base {
+    color:red;
+    width:100%;
+    clear:both;
+    padding:20px 0 0 0;
+}
+
+.example p {
+    font-size: 20px;
+}
+table td:last-child {
+    color: green;
+}
+</textarea>
+
             </div>
         </div>
         <div class="main_block__row row height__adaptive--50">
             <div class="col-md-12 height__adaptive--100 main_block__col--result">
                 <i class="fa fa-fort-awesome emblem emblem--result"></i>
                 <!--  <div class="container__html-view"></div> -->
-                <textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Inlined HTML"></textarea>
+<textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Inlined HTML">
+
+</textarea>
             </div>
         </div>
+
     </main>
     <script src="libs/jquery/jquery-1.11.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.js"></script>
