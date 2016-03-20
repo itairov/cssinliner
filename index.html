@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8" />
     <title>HTML, CSS inliner</title>
@@ -9,6 +10,7 @@
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="stylesheet" href="libs/normalize.css">
     <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/bootstrap/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/theme/ambiance.min.css" />
@@ -18,43 +20,63 @@
 <body class="height__adaptive--100">
     <header class="header container">
         <div class="row">
-            <div class="col-md-9">
-                <button type="button" class="btn btn-success js-convert">Convert</button>
+            <div class="col-md-8">
+                <button type="button" class="btn btn-success js-convert">Convert <i class="fa fa-cog header__convert--emblem"></i></button>
             </div>
+
             <div class="col-md-3">
                 <ul class="nav nav-pills">
                     <li role="presentation" class="active js-toggle js-html"><a href="#">HTML</a></li>
                     <li role="presentation" class="js-toggle js-source"><a href="#">View</a></li>
                 </ul>
             </div>
+            <div class="col-md-1">
+                <!--<script type="text/javascript" src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>-->
+                <!--<script type="text/javascript" src="http://yastatic.net/share2/share.js" charset="utf-8"></script>-->
+                <!--<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,whatsapp" data-limit="0"></div>-->
+            </div>
+
         </div>
     </header>
     <main class="container main_block height__adaptive--100 ">
-<form enctype="application/x-www-form-urlencoded" action="/">
 
         <div class="row main_block__row height__adaptive--50">
             <div class="col-md-6 height__adaptive--100 main_block__col--html">
+                <i class="fa fa-html5 emblem emblem--html"></i>
 <textarea name="contentHtml" class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
-{{contentHtml}}
+<!doctype html>
+<html lang="en">
+<style>
+    p.red {
+        color: red;
+    }
+</style>
+<body>
+<p class="red">
+    Red paragraph
+</p>
+</body>
+</html>
 </textarea>
             </div>
             <div class="col-md-6 height__adaptive--100 main_block__col--css">
-
+                <i class="fa fa-css3 emblem emblem--css"></i>
 <textarea name="contentCss" class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS">
-{{contentCss}}
+
 </textarea>
 
             </div>
         </div>
         <div class="main_block__row row height__adaptive--50">
             <div class="col-md-12 height__adaptive--100 main_block__col--result">
+                <i class="fa fa-fort-awesome emblem emblem--result"></i>
                 <!--  <div class="container__html-view"></div> -->
 <textarea class="container__textarea container__textarea--result height__adaptive--100" placeholder="Inlined HTML">
-{{contentResult}}
+
 </textarea>
             </div>
         </div>
-</form>
+
     </main>
     <script src="libs/jquery/jquery-1.11.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.12.0/codemirror.min.js"></script>

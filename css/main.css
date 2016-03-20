@@ -26,26 +26,25 @@ body textarea:required:valid {}
 
 html {
     height: 100%;
-    /*overflow: hidden;*/
 }
 
 body {
     font-size: 16px;
-    padding-top:20px;
+    padding-top: 20px;
     background-color: #333333;
 }
 
-.header{
-	padding-bottom: 20px;
+.header {
+    padding-bottom: 20px;
 }
 
 .main_block {
-	padding-top: 70px;
-	margin-top: -70px;
+    padding-top: 70px;
+    margin-top: -70px;
 }
 
-.main_block__row{
-	padding-bottom: 20px;
+.main_block__row {
+    padding-bottom: 20px;
 }
 
 .height__adaptive--100 {
@@ -65,3 +64,44 @@ body {
 .main_block__col--result .CodeMirror {
     height: 100%;
 }
+
+.main_block__col--html,
+.main_block__col--css,
+.main_block__col--result {
+    position: relative;
+}
+
+.emblem {
+    position: absolute;
+    right: 40px;
+    bottom: 21px;
+    opacity: 0.7;
+    font-size: 36px;
+    z-index: 111;
+}
+
+.header__convert--emblem{
+    color: yellow;
+    font-size: 20px;
+}
+.emblem--html{
+    color: #E54D26;
+}
+.emblem--css{
+    color: #1471B6;
+    font-size: 32px;
+}
+.emblem--result{
+    color: #126517;
+    opacity: 1;
+    font-size: 50px;
+}
+
+.loader {
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

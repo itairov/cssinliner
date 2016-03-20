@@ -2,27 +2,17 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
+$data = array();
+if (!empty($_POST['data'])) {
+    $data = $_POST['data'];
+}
+$html = !empty($data['html']) ? $data['html'] : '';
+$css  = !empty($data['css'])  ? $data['css']  : '';
 
-$html = <<<HTML
-<!doctype html>
-<html lang="en">
-<style>
-    p.red {
-        color: red;
-    }
-</style>
-<body>
-<p class="red">
-    Red paragraph
-</p>
-</body>
-</html>
-HTML;
-
-$css = <<<CSS
-
-CSS;
-
+if (empty($html)) {
+    echo '<!-- Nothing to convert -->';
+    exit();
+}
 // create instance
 $cssToInlineStyles = new CssToInlineStyles($html, $css);
 $cssToInlineStyles->setUseInlineStylesBlock();
@@ -31,3 +21,5 @@ $cssToInlineStyles->setStripOriginalStyleTags();
 
 // output
 $html = $cssToInlineStyles->convert();
+
+echo $html;
