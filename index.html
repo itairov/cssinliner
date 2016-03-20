@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8" />
     <title>HTML, CSS inliner</title>
@@ -44,17 +43,40 @@
             <div class="col-md-6 height__adaptive--100 main_block__col--html">
                 <i class="fa fa-html5 emblem emblem--html"></i>
 <textarea name="contentHtml" class="container__textarea container__textarea--html height__adaptive--100" placeholder="HTML">
-<!doctype html>
-<html lang="en">
-<style>
-    p.red {
-        color: red;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+</head>
 <body>
-<p class="red">
-    Red paragraph
-</p>
+<div class="base example">
+    <h3>
+        Загловок
+    </h3>
+
+    <p>
+        Текст
+    </p>
+
+</div>
+
+<table>
+    <tr>
+        <td>
+            first child
+        </td>
+        <td>
+            second child
+        </td>
+        <td>
+            third child
+        </td>
+        <td>
+            last child
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
 </textarea>
@@ -62,7 +84,22 @@
             <div class="col-md-6 height__adaptive--100 main_block__col--css">
                 <i class="fa fa-css3 emblem emblem--css"></i>
 <textarea name="contentCss" class="container__textarea container__textarea--css height__adaptive--100" placeholder="CSS">
+.base h3 {
+    color: blue;
+}
+.base {
+    color:red;
+    width:100%;
+    clear:both;
+    padding:20px 0 0 0;
+}
 
+.example p {
+    font-size: 20px;
+}
+table td:last-child {
+    color: green;
+}
 </textarea>
 
             </div>

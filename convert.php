@@ -15,11 +15,11 @@ if (empty($html)) {
 }
 // create instance
 $cssToInlineStyles = new CssToInlineStyles($html, $css);
+$cssToInlineStyles->setEncoding('utf-8');
 $cssToInlineStyles->setUseInlineStylesBlock();
 $cssToInlineStyles->setCleanup();
 $cssToInlineStyles->setStripOriginalStyleTags();
 
 // output
-$html = $cssToInlineStyles->convert();
-
+$html = $cssToInlineStyles->convert(true);
 echo $html;
