@@ -1,4 +1,5 @@
 <?php
+sleep(1);
 require __DIR__ . '/vendor/autoload.php';
 
 use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
